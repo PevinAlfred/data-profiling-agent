@@ -1,0 +1,2 @@
+llm_model: "gpt2"
+execution_engine: "pandas"  # Options: pandas, dask, spark

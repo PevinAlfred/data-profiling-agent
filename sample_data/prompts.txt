@@ -1,0 +1,5 @@
+# Profiling Prompts
+- Detect missing values and outliers in all columns
+- Flag invalid email formats
+- Suggest cleaning steps for age column (e.g., fill missing, remove negatives)
+- Provide summary statistics for each column
