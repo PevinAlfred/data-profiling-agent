@@ -1,5 +1,12 @@
-# Profiling Prompts
-- Detect missing values and outliers in all columns
-- Flag invalid email formats
-- Suggest cleaning steps for age column (e.g., fill missing, remove negatives)
-- Provide summary statistics for each column
+# Profiling Prompts for Latest DOMD and Input
+- Detect missing, invalid, or incorrectly formatted values in all columns as per schema constraints.
+- Flag dates not in YYYYMMDD format.
+- Flag site numbers not exactly 4 digits.
+- Flag article numbers not exactly 18 digits or not starting with six zeros.
+- Flag non-integer stock_units.
+- Flag non-decimal retail_value and cost_value.
+- Flag currency values not equal to 'GBP'.
+- For cleaning: Correct date format to YYYYMMDD if possible, pad site/article numbers to required length, convert stock_units to integer, retail_value/cost_value to float, and set currency to 'GBP' if missing or invalid.
+- Provide summary statistics and a list of all corrections applied.
+- Output clean_data.csv with all fields fixed where possible, not just rows that were already clean.
+- Output unclean_data.csv with rows that could not be fixed or still violate constraints after attempted cleaning.

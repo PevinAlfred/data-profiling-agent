@@ -1,3 +1,4 @@
-id,name,age,email
-2,Bob,,-
-4,David,-5.0,david@invalid
+date,site,article,stock_units,retail_value,cost_value,currency
+20250226,0802,000000987654321006,10,,15.0,GBP
+20250228,0804,000000987654321008,10,19.99,,GBP
+20250309,1014,000000ABCDEF123463,0,,,GBP

@@ -1,9 +1,82 @@
 {
   "columns": [
-    {"name": "id", "type": "integer", "required": true},
-    {"name": "name", "type": "string", "required": true},
-    {"name": "age", "type": "integer", "required": false},
-    {"name": "email", "type": "string", "required": false}
+    {
+      "name": "date",
+      "description": "calendar date",
+      "type": "date",
+      "length": 8,
+      "required": true,
+      "nullable": false,
+      "primary_key": true,
+      "sample": "20251221",
+      "constraints": "Date Format should be YYYYMMDD"
+    },
+    {
+      "name": "site",
+      "description": "site number",
+      "type": "string",
+      "length": 4,
+      "required": true,
+      "nullable": false,
+      "primary_key": true,
+      "sample": "234",
+      "constraints": "Field Length Should be 4 digit"
+    },
+    {
+      "name": "article",
+      "description": "product number or article number or item number",
+      "type": "string",
+      "length": 18,
+      "required": true,
+      "nullable": false,
+      "primary_key": true,
+      "sample": "60505643011",
+      "constraints": "Field Length Should be 18 digit and leading with six zeros"
+    },
+    {
+      "name": "stock_units",
+      "description": "stock units which are free to allocate",
+      "type": "integer",
+      "length": 10,
+      "required": true,
+      "nullable": false,
+      "primary_key": false,
+      "sample": 1,
+      "constraints": "Must be integer value"
+    },
+    {
+      "name": "retail_value",
+      "description": "retail price of the stock units",
+      "type": "float",
+      "length": "5,2",
+      "required": true,
+      "nullable": false,
+      "primary_key": false,
+      "sample": 12.5,
+      "constraints": "Must be decimal value"
+    },
+    {
+      "name": "cost_value",
+      "description": "cost price of the stock units",
+      "type": "float",
+      "length": "5,2",
+      "required": true,
+      "nullable": false,
+      "primary_key": false,
+      "sample": 10.5,
+      "constraints": "Must be decimal value"
+    },
+    {
+      "name": "currency",
+      "description": "currency of the site",
+      "type": "string",
+      "length": 3,
+      "required": true,
+      "nullable": false,
+      "primary_key": false,
+      "sample": "GBP",
+      "constraints": "It should be GBP value only"
+    }
   ],
-  "primary_key": "id"
+  "primary_key": ["date", "site", "article"]
 }
