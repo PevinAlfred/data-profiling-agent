@@ -11,26 +11,22 @@ st.title("AI Data Profiling Agent")
 
 st.sidebar.header("Upload Files")
 domd_file = st.sidebar.file_uploader("DOMD (schema/metadata)", type=["json"])
-prompts_file = st.sidebar.file_uploader("Profiling Prompts", type=["txt"])
 csv_file = st.sidebar.file_uploader("Input CSV", type=["csv"])
 
 output_dir = "outputs"
 os.makedirs(output_dir, exist_ok=True)
 
-if st.sidebar.button("Run Profiling") and domd_file and prompts_file and csv_file:
+if st.sidebar.button("Run Profiling") and domd_file and csv_file:
     domd_path = os.path.join(output_dir, "domd.json")
-    prompts_path = os.path.join(output_dir, "prompts.txt")
     csv_path = os.path.join(output_dir, "input.csv")
 
     with open(domd_path, "wb") as f:
         f.write(domd_file.read())
-    with open(prompts_path, "wb") as f:
-        f.write(prompts_file.read())
     with open(csv_path, "wb") as f:
         f.write(csv_file.read())
 
     orchestrator = Orchestrator(config)
-    orchestrator.run(domd_path, prompts_path, csv_path, output_dir)
+    orchestrator.run(domd_path, csv_path, output_dir)
     st.success("Profiling complete!")
 
     import json
@@ -76,7 +72,7 @@ if st.sidebar.button("Run Profiling") and domd_file and prompts_file and csv_fil
     st.subheader("Clean Data Table")
     try:
         clean_df = pd.read_csv(f"{output_dir}/clean_data.csv")
-        st.dataframe(clean_df, use_container_width=True)
+        st.dataframe(clean_df, width='stretch')
     except Exception as e:
         st.error(f"Could not load clean data: {e}")
 
@@ -86,7 +82,7 @@ if st.sidebar.button("Run Profiling") and domd_file and prompts_file and csv_fil
     st.subheader("Unclean Data Table (Anomalies)")
     try:
         unclean_df = pd.read_csv(f"{output_dir}/unclean_data.csv")
-        st.dataframe(unclean_df, use_container_width=True)
+        st.dataframe(unclean_df, width='stretch')
     except Exception as e:
         st.error(f"Could not load unclean data: {e}")
 

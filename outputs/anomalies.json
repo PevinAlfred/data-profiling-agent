@@ -1,74 +1,274 @@
 {
   "anomalies": [
     {
-      "column_name": "date",
-      "anomaly_type": "format_error",
-      "details": "Invalid date format for rows 11, 12, 13, 14, 16, 30, 37. Expected format: YYYYMMDD."
+      "row": 11,
+      "column": "date",
+      "anomaly_type": "format",
+      "details": "Date Format should be YYYYMMDD"
     },
     {
-      "column_name": "date",
-      "anomaly_type": "missing_value",
-      "details": "Missing date value for row 15."
+      "row": 12,
+      "column": "date",
+      "anomaly_type": "format",
+      "details": "Date Format should be YYYYMMDD"
     },
     {
-      "column_name": "site",
-      "anomaly_type": "format_error",
-      "details": "Site value must be a 4-digit string. Incorrect format for rows 18, 19, 20, 21, 36."
+      "row": 13,
+      "column": "date",
+      "anomaly_type": "format",
+      "details": "Date Format should be YYYYMMDD"
     },
     {
-      "column_name": "site",
-      "anomaly_type": "missing_value",
-      "details": "Missing site value for row 27."
+      "row": 14,
+      "column": "date",
+      "anomaly_type": "null",
+      "details": "Date should not be null"
     },
     {
-      "column_name": "article",
-      "anomaly_type": "format_error",
-      "details": "Article must be an 18-digit string starting with zeros. Incorrect format for rows 23, 24, 25, 26, 27, 28, 31, 32, 33, 34, 35, 36, 37."
+      "row": 15,
+      "column": "date",
+      "anomaly_type": "format",
+      "details": "Date Format should be YYYYMMDD"
     },
     {
-      "column_name": "article",
-      "anomaly_type": "missing_value",
-      "details": "Missing article value for row 29."
+      "row": 16,
+      "column": "date",
+      "anomaly_type": "format",
+      "details": "Date Format should be YYYYMMDD"
     },
     {
-      "column_name": "stock_units",
-      "anomaly_type": "type_error",
-      "details": "Stock units must be an integer. Incorrect type for rows 22, 31."
+      "row": 17,
+      "column": "date",
+      "anomaly_type": "format",
+      "details": "Date Format should be YYYYMMDD"
     },
     {
-      "column_name": "stock_units",
-      "anomaly_type": "missing_value",
-      "details": "Missing stock units value for rows 28, 29."
+      "row": 18,
+      "column": "date",
+      "anomaly_type": "format",
+      "details": "Date Format should be YYYYMMDD"
     },
     {
-      "column_name": "retail_value",
-      "anomaly_type": "type_error",
-      "details": "Retail value must be a float. Incorrect type for rows 25, 31."
+      "row": 19,
+      "column": "date",
+      "anomaly_type": "format",
+      "details": "Date Format should be YYYYMMDD"
     },
     {
-      "column_name": "retail_value",
-      "anomaly_type": "missing_value",
-      "details": "Missing retail value for row 27."
+      "row": 20,
+      "column": "site",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 4 digit"
     },
     {
-      "column_name": "cost_value",
-      "anomaly_type": "type_error",
-      "details": "Cost value must be a float. Incorrect type for row 31."
+      "row": 21,
+      "column": "site",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 4 digit"
     },
     {
-      "column_name": "cost_value",
-      "anomaly_type": "missing_value",
-      "details": "Missing cost value for rows 27, 29."
+      "row": 22,
+      "column": "site",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 4 digit"
     },
     {
-      "column_name": "currency",
-      "anomaly_type": "invalid_value",
-      "details": "Currency must be 'GBP'. Invalid values for rows 31, 32, 33, 34, 38."
+      "row": 23,
+      "column": "site",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 4 digit"
     },
     {
-      "column_name": "currency",
-      "anomaly_type": "missing_value",
-      "details": "Missing currency value for row 35."
+      "row": 24,
+      "column": "site",
+      "anomaly_type": "null",
+      "details": "Site should not be null"
+    },
+    {
+      "row": 25,
+      "column": "site",
+      "anomaly_type": "format",
+      "details": "Field Length Should be 4 digit"
+    },
+    {
+      "row": 26,
+      "column": "site",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 4 digit"
+    },
+    {
+      "row": 27,
+      "column": "article",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 18 digit and leading with six zeros"
+    },
+    {
+      "row": 28,
+      "column": "article",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 18 digit and leading with six zeros"
+    },
+    {
+      "row": 29,
+      "column": "article",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 18 digit and leading with six zeros"
+    },
+    {
+      "row": 30,
+      "column": "article",
+      "anomaly_type": "null",
+      "details": "Article should not be null"
+    },
+    {
+      "row": 31,
+      "column": "article",
+      "anomaly_type": "format",
+      "details": "Field Length Should be 18 digit and leading with six zeros"
+    },
+    {
+      "row": 32,
+      "column": "article",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 18 digit and leading with six zeros"
+    },
+    {
+      "row": 33,
+      "column": "article",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 18 digit and leading with six zeros"
+    },
+    {
+      "row": 34,
+      "column": "article",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 18 digit and leading with six zeros"
+    },
+    {
+      "row": 35,
+      "column": "stock_units",
+      "anomaly_type": "format",
+      "details": "Must be integer value"
+    },
+    {
+      "row": 36,
+      "column": "stock_units",
+      "anomaly_type": "null",
+      "details": "Stock units should not be null"
+    },
+    {
+      "row": 37,
+      "column": "stock_units",
+      "anomaly_type": "null",
+      "details": "Stock units should not be null"
+    },
+    {
+      "row": 38,
+      "column": "retail_value",
+      "anomaly_type": "format",
+      "details": "Must be decimal value"
+    },
+    {
+      "row": 39,
+      "column": "retail_value",
+      "anomaly_type": "format",
+      "details": "Must be decimal value"
+    },
+    {
+      "row": 40,
+      "column": "retail_value",
+      "anomaly_type": "null",
+      "details": "Retail value should not be null"
+    },
+    {
+      "row": 41,
+      "column": "cost_value",
+      "anomaly_type": "format",
+      "details": "Must be decimal value"
+    },
+    {
+      "row": 42,
+      "column": "cost_value",
+      "anomaly_type": "format",
+      "details": "Must be decimal value"
+    },
+    {
+      "row": 43,
+      "column": "cost_value",
+      "anomaly_type": "null",
+      "details": "Cost value should not be null"
+    },
+    {
+      "row": 44,
+      "column": "currency",
+      "anomaly_type": "format",
+      "details": "It should be GBP value only"
+    },
+    {
+      "row": 45,
+      "column": "currency",
+      "anomaly_type": "format",
+      "details": "It should be GBP value only"
+    },
+    {
+      "row": 46,
+      "column": "currency",
+      "anomaly_type": "format",
+      "details": "It should be GBP value only"
+    },
+    {
+      "row": 47,
+      "column": "currency",
+      "anomaly_type": "null",
+      "details": "Currency should not be null"
+    },
+    {
+      "row": 48,
+      "column": "date",
+      "anomaly_type": "format",
+      "details": "Date Format should be YYYYMMDD"
+    },
+    {
+      "row": 49,
+      "column": "site",
+      "anomaly_type": "length",
+      "details": "Field Length Should be 4 digit"
+    },
+    {
+      "row": 50,
+      "column": "site",
+      "anomaly_type": "null",
+      "details": "Site should not be null"
+    },
+    {
+      "row": 51,
+      "column": "article",
+      "anomaly_type": "null",
+      "details": "Article should not be null"
+    },
+    {
+      "row": 52,
+      "column": "stock_units",
+      "anomaly_type": "format",
+      "details": "Must be integer value"
+    },
+    {
+      "row": 53,
+      "column": "retail_value",
+      "anomaly_type": "format",
+      "details": "Must be decimal value"
+    },
+    {
+      "row": 54,
+      "column": "cost_value",
+      "anomaly_type": "format",
+      "details": "Must be decimal value"
+    },
+    {
+      "row": 55,
+      "column": "currency",
+      "anomaly_type": "format",
+      "details": "It should be GBP value only"
     }
   ]
 }

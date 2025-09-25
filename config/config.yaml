@@ -1,2 +1,0 @@
-llm_model: "mistral-large-latest"
-execution_engine: "pandas"  # Options: pandas, dask, spark
